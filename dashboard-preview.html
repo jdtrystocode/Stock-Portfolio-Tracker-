@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Preview</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Nunito', 'Poppins', sans-serif;
+        }
+        body {
+            background: #0d1117;
+            color: #fff;
+            padding: 20px;
+        }
+        .dashboard {
+            background: rgba(22, 27, 34, 0.8);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 30px rgba(0, 255, 200, 0.2);
+            width: 100%;
+            max-width: 550px;
+            margin: 0 auto;
+        }
+        .dashboard-header {
+            background: rgba(13, 17, 23, 0.8);
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .portfolio-value {
+            display: flex;
+            flex-direction: column;
+        }
+        .portfolio-label {
+            font-size: 12px;
+            color: #b0b8c1;
+        }
+        .portfolio-amount {
+            font-size: 24px;
+            font-weight: 700;
+        }
+        .profit {
+            display: flex;
+            align-items: center;
+            color: #00ff88;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        .profit i {
+            margin-right: 5px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th {
+            background: rgba(255, 255, 255, 0.05);
+            text-align: left;
+            padding: 12px 15px;
+            font-size: 13px;
+            color: #b0b8c1;
+            font-weight: 600;
+        }
+        td {
+            padding: 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            font-size: 14px;
+        }
+        .stock-name {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .stock-logo {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: #fff;
+        }
+        .stock-details {
+            display: flex;
+            flex-direction: column;
+        }
+        .stock-symbol {
+            font-weight: 600;
+        }
+        .stock-fullname {
+            font-size: 12px;
+            color: #b0b8c1;
+        }
+        .gain {
+            color: #00ff88;
+            font-weight: 600;
+        }
+        .loss {
+            color: #ff4d4d;
+            font-weight: 600;
+        }
+        .chart-container {
+            height: 100px;
+            padding: 15px;
+            display: flex;
+            align-items: flex-end;
+            gap: 6px;
+        }
+        .chart-bar {
+            flex: 1;
+            background: linear-gradient(to top, #00aaff, #00ffaa);
+            border-radius: 3px 3px 0 0;
+            transition: height 0.5s ease;
+        }
+        .actions {
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .btn {
+            background: #00aaff;
+            color: #fff;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 13px;
+            cursor: pointer;
+        }
+        .btn-outline {
+            background: transparent;
+            border: 1px solid #00aaff;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <div class="dashboard-header">
+            <div class="portfolio-value">
+                <span class="portfolio-label">Portfolio Value</span>
+                <span class="portfolio-amount">₹3,47,892.50</span>
+            </div>
+            <div class="profit">
+                <i>↑</i> +₹12,450.20 (3.71%)
+            </div>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Stock</th>
+                    <th>Price</th>
+                    <th>Change</th>
+                    <th>Holdings</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="stock-name">
+                            <div class="stock-logo" style="background-color: #004C98;">R</div>
+                            <div class="stock-details">
+                                <span class="stock-symbol">RELIANCE</span>
+                                <span class="stock-fullname">Reliance Industries</span>
+                            </div>
+                        </div>
+                    </td>
+                    <td>₹2,943.40</td>
+                    <td class="gain">+1.24%</td>
+                    <td>₹88,302.00</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="stock-name">
+                            <div class="stock-logo" style="background-color: #00267A;">H</div>
+                            <div class="stock-details">
+                                <span class="stock-symbol">HDFCBANK</span>
+                                <span class="stock-fullname">HDFC Bank Ltd.</span>
+                            </div>
+                        </div>
+                    </td>
+                    <td>₹1,678.25</td>
+                    <td class="loss">-0.68%</td>
+                    <td>₹67,130.00</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="stock-name">
+                            <div class="stock-logo" style="background-color: #72A700;">I</div>
+                            <div class="stock-details">
+                                <span class="stock-symbol">INFY</span>
+                                <span class="stock-fullname">Infosys Ltd.</span>
+                            </div>
+                        </div>
+                    </td>
+                    <td>₹1,583.90</td>
+                    <td class="gain">+2.35%</td>
+                    <td>₹79,195.00</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="stock-name">
+                            <div class="stock-logo" style="background-color: #FF0022;">T</div>
+                            <div class="stock-details">
+                                <span class="stock-symbol">TCS</span>
+                                <span class="stock-fullname">Tata Consultancy Services</span>
+                            </div>
+                        </div>
+                    </td>
+                    <td>₹3,826.15</td>
+                    <td class="gain">+0.87%</td>
+                    <td>₹95,653.75</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="chart-container">
+            <div class="chart-bar" style="height: 40%;"></div>
+            <div class="chart-bar" style="height: 55%;"></div>
+            <div class="chart-bar" style="height: 45%;"></div>
+            <div class="chart-bar" style="height: 60%;"></div>
+            <div class="chart-bar" style="height: 70%;"></div>
+            <div class="chart-bar" style="height: 65%;"></div>
+            <div class="chart-bar" style="height: 80%;"></div>
+            <div class="chart-bar" style="height: 75%;"></div>
+            <div class="chart-bar" style="height: 85%;"></div>
+            <div class="chart-bar" style="height: 90%;"></div>
+        </div>
+        <div class="actions">
+            <button class="btn">Add Stock</button>
+            <button class="btn btn-outline">View All</button>
+        </div>
+    </div>
+    
+    <script>
+        // Animation for chart bars
+        const bars = document.querySelectorAll('.chart-bar');
+        
+        // Initialize all bars to 0 height
+        bars.forEach(bar => {
+            const targetHeight = bar.style.height;
+            bar.style.height = '0%';
+            
+            // Set a timeout to animate to the target height
+            setTimeout(() => {
+                bar.style.height = targetHeight;
+            }, 300 + Math.random() * 500);
+        });
+        
+        // Animate the bars periodically
+        setInterval(() => {
+            bars.forEach(bar => {
+                const currentHeight = parseInt(bar.style.height);
+                const fluctuation = Math.random() * 10 - 5; // Random value between -5 and 5
+                let newHeight = currentHeight + fluctuation;
+                
+                // Keep within reasonable bounds
+                if (newHeight < 30) newHeight = 30;
+                if (newHeight > 95) newHeight = 95;
+                
+                bar.style.height = newHeight + '%';
+            });
+        }, 3000);
+    </script>
+</body>
+</html>
