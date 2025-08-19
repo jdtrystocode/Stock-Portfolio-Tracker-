@@ -22,12 +22,5 @@ A web-based finance tracker application that allows users to monitor their stock
 3. Update `config.php` with your database credentials
 4. Deploy to a PHP-enabled web server
 
-## Screenshots
-![Dashboard Preview](preview_dashboard.jpg)
 
-## Demo
-[Live Demo](your-website-link-here)
-
-## Database Setup
-Create a MySQL database with the following structure:
 
