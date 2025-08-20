@@ -81,6 +81,4 @@
 - ✅ Web server (Apache/Nginx)
 - ✅ Internet connection (for live stock data)
 
-### 🔧 Installation
 
-1. **Clone the repository**
