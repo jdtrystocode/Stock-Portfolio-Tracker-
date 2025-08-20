@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![Stock Portfolio Tracker](preview_dashboard.jpg)
+![Stock Portfolio Tracker](preview_dashboard.png)
 
 **A sophisticated web-based finance tracker with real-time market data and advanced portfolio analytics**
 
